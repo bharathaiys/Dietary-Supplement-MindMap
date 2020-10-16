@@ -1,0 +1,44 @@
+<div class="main-content">
+  <div class="input-group no-border">
+    <div class="question">
+        What kind of dietary supplement
+        <mat-form-field>
+            <mat-label>Select a type</mat-label>
+            <mat-select [(value)]="type">
+              <mat-option value="production">Product</mat-option>
+              <mat-option value="ingredient">Ingredient</mat-option>
+            </mat-select>
+          </mat-form-field>
+          is effective for my
+          <mat-form-field>
+            <mat-label>Select a sympton</mat-label>
+            <mat-select [(value)]="sympton">
+              <mat-option value="Diabetes">Diabetes</mat-option>
+              <mat-option value="Colds, Common">Colds, Common</mat-option>
+              <mat-option value="Asthmas">Asthmas</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    
+    <button mat-raised-button (click)="queryServer(type,sympton)" class="btn btn-white btn-round btn-just-icon">
+      <i class="material-icons">search</i>
+      <div class="ripple-container"></div>
+    </button>
+  </div>
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Dietary Supplement Mindmap Visualization</h4>
+        <p class="card-category">Version 0.0.2</p>
+      </div>
+      <div class="card-body">
+        <div id="body">
+          <div class="svg-container">
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

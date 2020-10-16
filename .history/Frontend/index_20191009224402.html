@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="mousetrap.js"></script>
+  </head>
+  <body>
+    <div id="body">
+      <div class="out-container">
+          <div class="jumbotron">
+              <h1 class="display-4">Dietary Supplement Mindmap Viz v 0.0.1</h1>
+              <div class="lead question">What kind of dietary supplement &nbsp;<div class="dropdown">
+                  <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Ingredient/Production
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" onclick="chooseSearchType('production')">Production</a>
+                    <a class="dropdown-item" onclick="chooseSearchType('ingredient')">Ingredient</a>
+                  </div>
+                </div>&nbsp; is effective for my &nbsp;<div class="dropdown">
+                    <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Disease
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" onclick="chooseSymptom('Diabetes')">Diabetes</a>
+                      <a class="dropdown-item" onclick="chooseSymptom('Colds, Common')">Colds, Common</a>
+                      <a class="dropdown-item" onclick="chooseSymptom('Asthmas')">Asthmas</a>
+                    </div>
+                  </div>&nbsp;?</div>
+              <hr class="my-4">
+              <div class="color-container">
+                <div>
+                    <div>Disease or Syndrome</div>
+                    <div class="color-box" style='background-color: #C64E39'></div>
+                </div>
+                <div>
+                    <div>Dietary Supplement Product</div>
+                    <div class="color-box" style='background-color: #39B1C6'></div>
+                </div>
+                <div>
+                    <div>Dietary Supplement Ingredient</div>
+                    <div class="color-box" style='background-color: #397bc6'></div>
+                </div>
+                <div>
+                    <div>root</div>
+                    <div class="color-box" style='background-color: #c6a739'></div>
+                </div>
+              </div>
+              <div class="svg-container">
+  
+              </div>
+            </div>
+      <p>[Left] Move select left, [Right] Move selection right, [Up] Move selection up, [Down] Move selection down, [Del] Delete selected node</p>
+      </div>
+        
+      <div id="toolbar">
+        <!-- <button onclick="createNew(); return false;">New</button>
+        <button onclick="loadJSON('flare.json'); return false;">Flare (flare.json)</button>
+        <button onclick="loadJSON('data.json'); return false;">JSON (test.json)</button>
+        <button onclick="addNodes('right'); return false;">Add nodes right</button>
+        <button onclick="addNodes('left'); return false;">Add nodes left</button>
+        <button onclick="moveNodes('right', 'left'); return false;">Move right to left</button>
+        <button onclick="moveNodes('left', 'right'); return false;">Move left to right</button>
+        <button onclick="setConnector('diagonal'); return false;">Diagonal connector</button>
+        <button onclick="setConnector('elbow'); return false;">Elbow connector</button> -->
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="main.js"></script>
+</html>
