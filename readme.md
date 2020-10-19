@@ -1,3 +1,4 @@
+**HOW TO RUN**
 * Frontend  
     ```console
     http-server Frontend
